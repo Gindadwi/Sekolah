@@ -1,0 +1,267 @@
+// Ngoding NavBar
+.navbar {
+
+
+
+
+    #Logo {
+        margin-left: 15px;
+        font-size: 25px;
+        font-family: 'Baloo 2', sans-serif;
+        font-weight: bold;
+    }
+
+
+    .navbar-nav {
+        font-size: 18px;
+        font-family: 'Poppins';
+
+        .nav-item {
+            color: white;
+        }
+
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 1.25rem;
+        color: green;
+    }
+
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 27px;
+
+    }
+
+    .navbar-toggler:focus,
+    .btnclose:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .nav-link {
+        color: #ffffff;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+    }
+
+    .nav-item {
+        color: #ffffff;
+    }
+
+    .Button1 {
+        color: green;
+        font-size: 15px;
+        font-family: 'Poppins';
+    }
+
+    .Button2 {
+        font-size: 15px;
+        font-family: 'Poppins';
+    }
+
+    .ButtonDekstop {
+        color: green;
+        font-size: 15px;
+        font-family: 'Poppins';
+    }
+
+    /* Mengatur lebar sidebar saat di mobile */
+    .offcanvas {
+        max-width: 80%;
+    }
+
+    /* responsife di mobile */
+    @media (max-width: 768px) {
+        .offcanvas {
+            max-width: 40%;
+        }
+
+        .navbar-nav {
+            font-size: 15px;
+        }
+
+        #btnLogin {
+
+            display: none;
+        }
+
+        .navbar .navbar-brand,
+        .navbar .navbar-nav .nav-link {
+            color: black;
+        }
+    }
+
+
+    // responsife Dekstop
+    @media (min-width: 768px) {
+        #btnLogin1 {
+            display: none;
+        }
+
+        .navbar .navbar-brand,
+        .navbar .navbar-nav .nav-link {
+            color: white;
+        }
+
+    }
+}
+
+
+// Ngoding Desain Hero Menu
+
+.HeroMenu {
+
+    margin: 0 auto;
+    margin-top: 30px;
+
+    #containerHero {
+        margin-right: 50px;
+
+    }
+
+    #HeroString {
+        h3 {
+            font-family: 'Times New Roman', Times, serif;
+            color: green;
+            font-weight: 500;
+            font-size: 30px;
+        }
+
+        h1 {
+            font-weight: 600;
+        }
+
+        p {
+            font-family: 'Poppins';
+            font-size: 18px;
+        }
+    }
+
+    .Images {
+        border-radius: 5px;
+    }
+
+    .ImagesHero {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+
+    @media (max-width: 768px) {
+        .Images {
+            display: none;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .ImageHero {
+            display: none;
+        }
+    }
+}
+
+
+// prestasi bawah hero
+
+@media (max-width: 768px) {
+    #PrestasiDekstop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #PrestasiMobile {
+        display: none;
+    }
+}
+
+#PrestasiMobile {
+    margin-bottom: -10px;
+
+}
+
+#PenghargaanSekolah {
+    font-size: 13px;
+    font-family: 'Poppins';
+}
+
+
+
+//   Ngoding About Home
+
+.AboutHome {
+
+    h5 {
+        font-family: 'Baloo 2';
+        font-size: 21px;
+        font-weight: bold;
+
+    }
+
+    h3 {
+        font-family: 'Poppins';
+        font-size: 24px;
+
+    }
+
+}
+
+#Box1 {
+    border: solid 1px green;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    font-family: 'Poppins';
+    h6{
+        font-weight: bold;
+    }
+    p{
+        font-size: 13px;
+    }
+}
+#Box2 {
+    border: solid 1px green;
+    border-radius: 5px;
+    margin: 8px;
+    padding: 10px;
+    font-family: 'Poppins';
+    h6{
+        font-weight: bold;
+    }
+    p{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:768px) {
+    #Box1 {
+        display: none;
+    }
+}
+@media (min-width:768px) {
+    #Box2 {
+        display: none;
+    }
+}
