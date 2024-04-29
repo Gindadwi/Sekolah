@@ -73,7 +73,7 @@
 }
 @media (max-width: 768px) {
   .navbar .offcanvas {
-    max-width: 40%;
+    max-width: 60%;
   }
   .navbar .navbar-nav {
     font-size: 15px;
