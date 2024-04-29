@@ -190,6 +190,9 @@
 #Box2 p {
   font-size: 13px;
 }
+#Box2 h3 {
+  max-width: 100px;
+}
 
 @media (max-width: 768px) {
   #Box1 {
