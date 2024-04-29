@@ -19,6 +19,10 @@
 
 <body>
 
+    <!-- CDN Vuejs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-success text-white">
         <div class="container" id="MenuNav">
@@ -179,11 +183,11 @@
                         impedit! Distinctio ut quae commodi repellat exercitationem cumque ab voluptas vel inventore
                         beatae.</p>
 
+                        <button @click="showModal = true" class="btn btn-success">Pendaftaran Siswa</button>
+                        <button class="btn btn-outline-success">About</button>
 
-
-                    <button class="btn btn-success">Pendaftaran Siswa</button>
-                    <button class="btn btn-outline-success">About</button>
                 </div>
+
 
                 <!-- Image muncul di dekstop -->
                 <div class="col-md-5 mx-auto text-center">
@@ -241,13 +245,14 @@
     </section>
 
     <!-- akhir kode di bawah hero menu -->
-    
+
     <!-- Ngoding About -->
     <section class="bg-success-subtle">
-        <div class="container ">
-            <div class="AboutHome text-center" >
+        <div class="container pb-4">
+            <!-- Dekstop -->
+            <div class="AboutHome text-center">
                 <h5 class=" text-primary-emphasis pt-5">why should we?</h5>
-                <h3 class="text-center" >Benefits of joining our school</h3>
+                <h3 class="text-center">Benefits of joining our school</h3>
             </div>
             <div class="row  mx-auto justify-content-center" id="rowAbout">
                 <div class="box col-md-2 shadow bg-white" id="Box1">
@@ -268,45 +273,90 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                     <button class="btn btn-outline-success">Lihat </button>
                 </div>
-                <div class="box col-md-2 shadow bg-white"id="Box1">
+                <div class="box col-md-2 shadow bg-white" id="Box1">
                     <h3 class="background">🥇</h3>
                     <h6>Banefits Prestasi</h6>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                     <button class="btn btn-outline-success">Lihat </button>
                 </div>
-<!-- -------------------------------------------------------------------------------------------------------- -->
+                <!-- -------------------------------------------------------------------------------------------------------- -->
+                <!-- Mobile -->
+                <div class="row  mx-auto justify-content-center" id="rowAbout">
+                    <div class="box col-5 shadow bg-white" id="Box2">
+                        <h3 class="background">🏤</h3>
+                        <h6>Fasilitas Memadai</h6>
+                        <button class="btn btn-sm btn-outline-success">Lihat </button>
+                    </div>
+                    <div class="box col-5 shadow bg-white" id="Box2">
+                        <h3 class="background">👨‍🏫</h3>
+                        <h6>Guru yang Profesional</h6>
+                        <button class="btn btn-sm btn-outline-success">Lihat </button>
+                    </div>
+                    <div class="box col-5 shadow bg-white" id="Box2">
+                        <h3 class="background">📖</h3>
+                        <h6>Kurikulum Terbaru</h6>
+                        <button class="btn btn-sm btn-outline-success">Lihat </button>
+                    </div>
+                    <div class="box col-5 shadow bg-white" id="Box2">
+                        <h3 class="background">🥇</h3>
+                        <h6>Banefits Prestasi</h6>
+                        <button class="btn btn-sm btn-outline-success">Lihat </button>
+                    </div>
+                </div>
+            </div>
+    </section>
 
-            <div class="row  mx-auto justify-content-center" id="rowAbout">
-                <div class="box col-5 shadow bg-white" id="Box2">
-                    <h3 class="background">🏤</h3>
-                    <h6>Fasilitas Memadai</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur</p>
-                    <button class="btn btn-outline-success">Lihat </button>
+
+    <!-- Akhir ngoding about -->
+
+
+    <!-- Ngoding Kenapa Harus Kami -->
+    <section>
+        <div class="container" id="KenapaKAmi">
+            <div class=" text-center">
+                <h1 class="pt-2">Kenapa Harus Kami</h1>
+                <hr class="garis">
+            </div>
+            <div class="row align-items-center" id="AboutFoto">
+                <div class="col-lg-6 text-end">
+                    <img src="sekolahan.jpg" alt="" width="325" id="MobileImage">
+                    <img src="sekolahan.jpg" alt="" width="500" id="DekstopImage" class="">
                 </div>
-                <div class="box col-5 shadow bg-white" id="Box2">
-                    <h3 class="background">👨‍🏫</h3>
-                    <h6>Guru yang Profesional</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur</p>
-                    <button class="btn btn-outline-success">Lihat </button>
+                <div class="col-lg-6" id="text1">
+                    <h2 class="pt-3">Pembelajaran Yang Effektif</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis
+                        laudantium recusandae debitis. Veritatis, amet. Fugiat quia dolorem consequatur maxime commodi,
+                        debitis libero odio aspernatur.</p>
                 </div>
-                <div class="box col-5 shadow bg-white" id="Box2">
-                    <h3 class="background">📖</h3>
-                    <h6>Kurikulum Terbaru</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur </p>
-                    <button class="btn btn-outline-success">Lihat </button>
+            </div>
+
+
+            <div class="row align-items-center pt-5" id="AboutFoto">
+
+                <div class="text-center">
+                    <img src="lab sekolah.jpg" alt="" width="325" id="MobileImage">
                 </div>
-                <div class="box col-5 shadow bg-white"id="Box2">
-                    <h3 class="background">🥇</h3>
-                    <h6>Banefits Prestasi</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur</p>
-                    <button class="btn btn-outline-success">Lihat </button>
+
+                <div class="col-lg-6 text-end" id="text1">
+                    <h2 class="pt-3">Memiliki Program-Program untuk Meningkatkan skill</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis
+                        laudantium recusandae
+                        debitis. Veritatis, amet. Fugiat quia dolorem consequatur maxime commodi, debitis libero odio
+                        aspernatur.</p>
                 </div>
+
+                <div class="col-lg-6 text-start">
+                    <img src="lab sekolah.jpg" alt="" width="500" id="DekstopImage">
+                </div>
+
             </div>
         </div>
     </section>
 
 
-    <!-- Akhir ngoding about -->
+
+
+
 
     <!-- CDN Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

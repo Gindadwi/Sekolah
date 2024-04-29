@@ -234,26 +234,32 @@
     margin: 5px;
     padding: 10px;
     font-family: 'Poppins';
-    h6{
+
+    h6 {
         font-weight: bold;
     }
-    p{
+
+    p {
         font-size: 13px;
     }
 }
+
 #Box2 {
     border: solid 1px green;
     border-radius: 5px;
     margin: 10px;
     padding: 15px;
     font-family: 'Poppins';
-    h6{
+
+    h6 {
         font-weight: bold;
     }
-    p{
+
+    p {
         font-size: 13px;
     }
-    h3{
+
+    h3 {
         max-width: 100px;
     }
 }
@@ -263,8 +269,62 @@
         display: none;
     }
 }
+
 @media (min-width:768px) {
     #Box2 {
+        display: none;
+    }
+}
+
+
+
+// Kenapa Harus Kami
+
+#KenapaKAmi {
+    h1 {
+        font-family: 'Baloo 2';
+        font-weight: 700;
+    }
+
+    .garis {
+        width: 150px;
+        height: 5px;
+        background: green;
+        border: none;
+        margin: 0 auto 30px;
+    }
+    
+    #text1{
+        h2{
+            font-family: 'Baloo 2';
+            font-weight: 600;
+        }
+
+        p{
+         font-family: 'Poppins';
+        }
+    }
+
+}
+
+#AboutFoto {
+
+    img {
+        border: 2px solid green;
+        border-radius: 5px;
+    }
+
+}
+
+
+@media (max-width:768px) {
+    #DekstopImage {
+        display: none;
+    }
+}
+
+@media (min-width:768px) {
+    #MobileImage {
         display: none;
     }
 }
