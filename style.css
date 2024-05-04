@@ -223,6 +223,9 @@
 #KenapaKAmi #text1 p {
   font-family: "Poppins";
 }
+#KenapaKAmi #MobileImage {
+  box-shadow: 0 0 10px green;
+}
 
 #AboutFoto img {
   border: 2px solid green;
@@ -238,4 +241,30 @@
   #MobileImage {
     display: none;
   }
+}
+#FotoPrestasi {
+  text-align: center;
+}
+#FotoPrestasi h2 {
+  font-family: "Baloo 2";
+  font-size: 28px;
+  font-weight: 600;
+}
+#FotoPrestasi p {
+  font-family: "Poppins";
+}
+#FotoPrestasi .card {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-family: "Poppins";
+  margin: 5px;
+  position: relative;
+}
+#FotoPrestasi .card img {
+  width: 130%;
+  height: auto;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+#FotoPrestasi .card h5 {
+  padding-top: 10px;
 }/*# sourceMappingURL=style.css.map */
