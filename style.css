@@ -226,6 +226,9 @@
 #KenapaKAmi #MobileImage {
   box-shadow: 0 0 10px green;
 }
+#KenapaKAmi #DekstopImage {
+  width: 75%;
+}
 
 #AboutFoto img {
   border: 2px solid green;
@@ -245,9 +248,8 @@
 #FotoPrestasi {
   text-align: center;
 }
-#FotoPrestasi h2 {
+#FotoPrestasi h1 {
   font-family: "Baloo 2";
-  font-size: 28px;
   font-weight: 600;
 }
 #FotoPrestasi p {
@@ -267,4 +269,43 @@
 }
 #FotoPrestasi .card h5 {
   padding-top: 10px;
+}
+#FotoPrestasi .box {
+  max-width: 350px;
+  margin: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+#FotoPrestasi .box img {
+  width: 100%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+#Footer h5 {
+  font-family: "Baloo 2";
+  font-size: 28px;
+}
+#Footer #Alamat {
+  padding-top: -20px;
+  margin-top: -10px;
+  font-family: "Poppins";
+  font-size: 13px;
+}
+#Footer #Copyright {
+  font-family: "Poppins";
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  #MobileFoto {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #DesktopFoto {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

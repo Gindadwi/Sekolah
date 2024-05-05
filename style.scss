@@ -310,6 +310,9 @@
         box-shadow: 0 0 10px green;
     }
 
+    #DekstopImage{
+        width: 75%;
+    }
 
 }
 
@@ -339,9 +342,8 @@
 // Foto Prestasi
 #FotoPrestasi {
         text-align: center;
-        h2{
+        h1{
             font-family: 'Baloo 2';
-            font-size: 28px;
             font-weight: 600;
         }
 
@@ -367,5 +369,49 @@
     }
 
 
+    .box{
+        max-width: 350px;
+        margin: 5px;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border: 1px solid #fff;
+        border-radius: 5px;
+        img{
+            width: 100%;
+            margin: auto;
+            padding-top: 10px;
+        }
+    }
 
+}
+
+
+// Footer
+#Footer{
+    h5{
+        font-family: 'Baloo 2';
+        font-size: 28px;
+    }
+
+    #Alamat{
+        padding-top: -20px;
+        margin-top: -10px;
+        font-family: 'Poppins';
+        font-size: 13px;
+    }
+    #Copyright{
+        font-family: 'Poppins';
+        font-size: 13px;
+    }
+}
+
+@media (min-width:768px) {
+    #MobileFoto{
+        display: none;
+    }
+}
+@media (max-width:768px) {
+    #DesktopFoto{
+        display: none;
+    }
 }
