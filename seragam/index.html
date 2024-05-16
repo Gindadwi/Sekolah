@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Link CDN Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- kode CDN Vue js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-success text-white ">
+        <div class="container" id="MenuNav">
+            <a class="navbar-brand me-auto text-white" id="Logo" href="#">Spemba</a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header bg-success">
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Home</h5>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bg-success ">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-2 text-white" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-2 text-white" href="#">tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-2 text-white" href="#">Seragam</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-2 text-white" href="#">Prestasi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-2 text-white" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gap-2">
+                <!-- button login Desktop -->
+                <button type="button" id="btnLogin" class="Button1 btn btn-light" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">
+                    Login
+                </button>
+                <!-- Button Register Dekstop -->
+                <button type="button" id="btnLogin" class="Button2 btn btn-outline-light " data-bs-toggle="modal"
+                    data-bs-target="#registerModal">
+                    Register
+                </button>
+                <!-- Button trigger modal Login Mobile-->
+                <button type="button" id="btnLogin1" class="Button1 btn btn-light btn-sm " data-bs-toggle="modal"
+                    data-bs-target="#loginModal">
+                    Login
+                </button>
+                <!-- Button trigger modal register Mobile -->
+                <button type="button" id="btnLogin1" class="Button2 btn btn-outline-light btn-sm "
+                    data-bs-toggle="modal" data-bs-target="#registerModal">
+                    Register
+                </button>
+
+                <button class="navbar-toggler text-white bg-white btn-sm " type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- Akhir NavBar -->
+
+    <!-- Modal Login-->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label text-black">Username</label>
+                            <input type="text" class="form-control border border-success" id="username"
+                                placeholder="Enter username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label text-black">Password</label>
+                            <input type="password" class="form-control border border-success" id="password"
+                                placeholder="Enter password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Modal Login -->
+
+    <!-- Modal Register-->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div>
+                            <label for="username" class="form-label text-black">Username</label>
+                            <input type="text" class="form-control border border-success" id="username" name="username"
+                                placeholder="Enter username">
+                        </div>
+                        <div>
+                            <label for="email" class="form-label text-black">Email</label>
+                            <input type="email" class="form-control border border-success" id="email" name="email"
+                                placeholder="Enter Email">
+                        </div>
+                        <div class="">
+                            <label for="Nomor" class="form-label text-black">Nomor Hp</label>
+                            <input type="number" class="form-control border border-success" id="NomorHp" name="NomorHp"
+                                placeholder="Enter NomorHp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirm_password" class="form-label text-black">Confirm
+                                Password</label>
+                            <input type="password" class="form-control border border-success" id="confirm_password"
+                                name="confirm_password" placeholder="Confirm password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Akhir Modal Register -->
+
+    <!-- Menu Jual Baju Sekolah -->
+    <br>
+    <section class="bg-success-subtle pt-5 pb-5" id="app">
+        <div class="container bg-success-subtle">
+            <!-- Input Pencarian -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <input type="text" class="form-control border border-success" v-model="searchQuery" placeholder="Cari seragam...">
+                </div>
+            </div>
+
+            <div class="row mx-auto justify-content-center">
+                <div v-for="seragam in filteredSeragam" :key="seragam.id" class="card col-5 m-2">
+                    <img :src="seragam.image" :alt="seragam.name" class="border shadow">
+                    <h5>{{ seragam.name }}</h5>
+                    <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" :data-bs-target="'#modal' + seragam.id">
+                        Klik Beli
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal templates for each seragam -->
+            <div v-for="seragam in filteredSeragam" :key="seragam.id" class="modal fade" :id="'modal' + seragam.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img :src="seragam.image" alt="" width="120px" class="border">
+                            <br>
+                            <div class="d-inline-flex gap-2 pt-3">
+                                <button class="btn mt-1 border shadow" @click="Pesanan++">+</button>
+                                <button class="btn mt-1 border shadow" @click="Pesanan--">-</button>
+                            </div>
+                            <p class="pt-3">Masukan Jumlah Pesan: {{Pesanan}}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            const app = Vue.createApp({
+                data() {
+                    return {
+                        Pesanan: 0,
+                        searchQuery: '',
+                        seragamList: [
+                            { id: 1, name: 'Seragam Osis', image: 'src/osis.jpg' },
+                            { id: 2, name: 'Seragam Pramuka', image: 'src/pramuka.jpg' },
+                            { id: 3, name: 'Seragam Batik', image: 'src/batik.jpg' },
+                            { id: 4, name: 'Seragam Olahraga', image: 'src/olahraga.png' }
+                        ]
+                    }
+                },
+                computed: {
+                    filteredSeragam() {
+                        return this.seragamList.filter(seragam => seragam.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
+                    }
+                }
+            }).mount('#app')
+        </script>
+
+    </section>
+    <!-- Akhir Menu Jual Baju Sekolah -->
+
+    <!-- Footer -->
+    <footer class="bg-success text-center text-lg-start text-white">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 link-light">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="" class="me-4 link-light">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="" class="me-4 link-light">
+                    <i class="bi bi-google"></i>
+                </a>
+                <a href="" class="me-4 link-light">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="" class="me-4 link-light">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="" class="me-4 link-light">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="bi bi-gem me-3"></i>Company name
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
+                            amet, consectetur
+                            adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-white">Angular</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">React</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">Vue</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">Laravel</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-white">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="bi bi-house-door me-3"></i> New York, NY 10012, US</p>
+                        <p>
+                            <i class="bi bi-envelope me-3"></i>
+                            info@example.com
+                        </p>
+                        <p><i class="bi bi-telephone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="bi bi-telephone me-3"></i> + 01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4 bg-success" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-white fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Akhir Footer -->
+
+    <!-- CDN Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
