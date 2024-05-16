@@ -19,7 +19,8 @@
         href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-
+    <!-- Aos Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -27,6 +28,11 @@
     <!-- CDN Vuejs -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
+    <!-- CDN AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-success text-white">
@@ -180,18 +186,19 @@
 
             <!-- Image Muncul di Mobile -->
             <div class="ImageHero mb-4 text-center">
-                <img class="ImagesHero" src="src/school-boy-holding-copy-space-notebook.jpg" alt="" width="200">
+                <img class="ImagesHero" src="src/school-boy-holding-copy-space-notebook.jpg" alt="" 
+                width="200" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
             </div>
 
             <div class="row fs-5 justify-content-center align-items-center">
                 <div class="col-md-6 justify-content-center" id="HeroString">
-                    <h3>Welcome To School</h3>
-                    <h1>Smp Muhammadiyah sumbang</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores sit quibusdam
+                    <h3 data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000" >Welcome To School</h3>
+                    <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="1200">Smp Muhammadiyah sumbang</h1>
+                    <p data-aos="fade-right" data-aos-delay="90" data-aos-duration="1400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores sit quibusdam
                         impedit! Distinctio ut quae commodi repellat exercitationem cumque ab voluptas vel inventore
                         beatae.</p>
-                    <button @click="openModal" class="btn btn-success">Pendaftaran Siswa</button>
-                    <button class="btn btn-outline-success">About</button>
+                    <button @click="openModal" class="btn btn-success" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1600">Pendaftaran Siswa</button>
+                    <button class="btn btn-outline-success" data-aos="fade-left" data-aos-delay="110" data-aos-duration="1600">About</button>
                 </div>
 
 
@@ -213,7 +220,7 @@
         <div class="container ">
             <!-- Muncul di Dekstop -->
             <div class="row align-items-left pt-2 pb-2 ps-4 text-center" id="PrestasiDekstop">
-                <div class="col text-white border-end border-white">
+                <div class="col text-white border-end border-white" >
                     <h2>🏆 150++</h2>
                     <h6 class="text-center">Penghargaan Sekolah terbaik</h6>
                 </div>
@@ -231,16 +238,16 @@
 
             <!-- Muncul di Mobile -->
             <div class="row align-items-left pt-2   text-center" id="PrestasiMobile">
-                <div class="col text-white  border-end-custom border-white">
+                <div class="col text-white  border-end-custom border-white" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
                     <h5>🏆 150++</h5>
                     <p class="text-center" id="PenghargaanSekolah">Penghargaan terbaik</p>
                 </div>
-                <div class="col text-white border-end-custom border-white">
+                <div class="col text-white border-end-custom border-white" data-aos="fade-down" data-aos-delay="60" data-aos-duration="1300">
                     <h5>🥇 200+</h5>
                     <h3 class="text-center"></h3>
                     <p class="text-center" id="PenghargaanSekolah">Lebih dari 100 prestasi</p>
                 </div>
-                <div class="col text-white">
+                <div class="col text-white" data-aos="fade-down" data-aos-delay="70" data-aos-duration="1500">
                     <h5>🎓 500+</h5>
                     <h3 class="text-center"></h3>
                     <p class="text-center" id="PenghargaanSekolah">Siswa lulusan terbaik</p>
@@ -257,11 +264,11 @@
         <div class="container pb-4">
             <!-- Dekstop -->
             <div class="AboutHome text-center">
-                <h5 class=" text-primary-emphasis pt-5">why should we?</h5>
-                <h3 class="text-center">Benefits of joining our school</h3>
+                <h5 class=" text-primary-emphasis pt-5" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1500">why should we?</h5>
+                <h3 class="text-center" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1600">Benefits of joining our school</h3>
             </div>
             <div class="row  mx-auto justify-content-center" id="rowAbout">
-                <div class="box col-md-2 shadow bg-white" id="Box1">
+                <div class="box col-md-2 shadow bg-white" id="Box1" >
                     <h3 class="background">🏤</h3>
                     <h6>Fasilitas Memadai</h6>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
@@ -288,22 +295,22 @@
                 <!-- -------------------------------------------------------------------------------------------------------- -->
                 <!-- Mobile -->
                 <div class="row  mx-auto justify-content-center" id="rowAbout">
-                    <div class="box col-5 shadow bg-white" id="Box2">
+                    <div class="box col-5 shadow bg-white" id="Box2" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">
                         <h3 class="background">🏤</h3>
                         <h6>Fasilitas Memadai</h6>
                         <button class="btn btn-sm btn-outline-success">Lihat </button>
                     </div>
-                    <div class="box col-5 shadow bg-white" id="Box2">
+                    <div class="box col-5 shadow bg-white" id="Box2" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
                         <h3 class="background">👨‍🏫</h3>
                         <h6>Guru yang Profesional</h6>
                         <button class="btn btn-sm btn-outline-success">Lihat </button>
                     </div>
-                    <div class="box col-5 shadow bg-white" id="Box2">
+                    <div class="box col-5 shadow bg-white" id="Box2" data-aos="fade-right" data-aos-delay="60" data-aos-duration="1200">
                         <h3 class="background">📖</h3>
                         <h6>Kurikulum Terbaru</h6>
                         <button class="btn btn-sm btn-outline-success">Lihat </button>
                     </div>
-                    <div class="box col-5 shadow bg-white" id="Box2">
+                    <div class="box col-5 shadow bg-white" id="Box2" data-aos="fade-left data-aos-delay="60" data-aos-duration="1200">
                         <h3 class="background">🥇</h3>
                         <h6>Banefits Prestasi</h6>
                         <button class="btn btn-sm btn-outline-success">Lihat </button>
@@ -320,17 +327,17 @@
     <section>
         <div class="container" id="KenapaKAmi">
             <div class=" text-center">
-                <h1 class="pt-2">Kenapa Harus Kami</h1>
+                <h1 class="pt-2" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">Kenapa Harus Kami</h1>
                 <hr class="garis">
             </div>
             <div class="row align-items-center" id="AboutFoto">
                 <div class="text-center">
-                    <img src="src/sekolahan.jpg" alt="" width="325" id="MobileImage">
+                    <img src="src/sekolahan.jpg" alt="" width="325" id="MobileImage" data-aos="fade-right" data-aos-delay="60" data-aos-duration="1200">
                 </div>
                 <div class="col-lg-6 text-end ">
                     <img src="src/sekolahan.jpg" alt="" width="500" id="DekstopImage" class="">
                 </div>
-                <div class="col-lg-6" id="text1">
+                <div class="col-lg-6" id="text1" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
                     <h2 class="pt-3">Pembelajaran Yang Effektif</h2>
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis
                         laudantium recusandae debitis. Veritatis, amet. Fugiat quia dolorem consequatur maxime commodi,
@@ -342,10 +349,10 @@
             <div class="row align-items-center pt-5" id="AboutFoto">
 
                 <div class="text-center">
-                    <img src="src/lab sekolah.jpg" alt="" width="325" id="MobileImage" class="shadow">
+                    <img src="src/lab sekolah.jpg" alt="" width="325" id="MobileImage" class="shadow" data-aos="fade-right" data-aos-delay="60" data-aos-duration="1200">
                 </div>
 
-                <div class="col-lg-6 text-end" id="text1">
+                <div class="col-lg-6 text-end" id="text1" data-aos="fade-left" data-aos-delay="60" data-aos-duration="1200">
                     <h2 class="pt-3">Memiliki Program-Program untuk Meningkatkan skill</h2>
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis
                         laudantium recusandae
@@ -368,42 +375,42 @@
     <section class="bg-success-subtle mt-5 mb-7" id="FotoPrestasi">
         <div class="container">
 
-            <h1 class="text-center pt-4">Prestasi Kami</h1>
-            <p>Di bawah ini Beberapa contoh prestasi yang sudah kami peroleh baik tingkat kabupaten maupun nasional</p>
+            <h1 class="text-center pt-4" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">Prestasi Kami</h1>
+            <p data-aos="fade-down" data-aos-delay="60" data-aos-duration="1200">Di bawah ini Beberapa contoh prestasi yang sudah kami peroleh baik tingkat kabupaten maupun nasional</p>
 
             <!-- Muncul Di Mobile -->
             <div class="row mx-auto justify-content-center pb-5 " id="MobileFoto">
-                <div class="card col-5  ">
+                <div class="card col-5  " data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">
                     <img id="Image" src="src/medali 1.jpg" alt="">
                     <h5>juara 2</h5>
                     <p>Lomba Matematika Provinsi</p>
                 </div>
 
-                <div class="card col-5  ">
+                <div class="card col-5  " data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
                     <img id="Image" src="src/Medali 2.jpeg" alt="" class="">
                     <h5>juara 1</h5>
                     <p>Lomba Pencak Silat kabupaten</p>
                 </div>
 
-                <div class="card col-5 ">
+                <div class="card col-5 " data-aos="fade-right" data-aos-delay="60" data-aos-duration="1200">
                     <img id="Image" src="src/Medali 3.jpg" alt="" class="">
                     <h5>juara 1</h5>
                     <p>Lomba Since Tingkat nasional</p>
                 </div>
 
-                <div class="card col-5  ">
+                <div class="card col-5  " data-aos="fade-left" data-aos-delay="60" data-aos-duration="1200">
                     <img id="Image" src="src/Medali 4.jpg" alt="" class="">
                     <h5>juara 1</h5>
                     <p>Lomba Pidato kabupaten</p>
                 </div>
 
-                <div class="card col-5 ">
+                <div class="card col-5 " data-aos="fade-right" data-aos-delay="70" data-aos-duration="1400">
                     <img id="Image" src="src/Medali 5.JPG" alt="" class="">
                     <h5>juara 3</h5>
                     <p>Lomba Renang nasional</p>
                 </div>
 
-                <div class="card col-5  ">
+                <div class="card col-5  " data-aos="fade-left" data-aos-delay="70" data-aos-duration="1400">
                     <img id="Image" src="src/Medali 6.jpeg" alt="" class="">
                     <h5>juara 1</h5>
                     <p>Lomba Pidato kabupaten</p>
@@ -460,27 +467,27 @@
     <!-- Ngoding Footer -->
     <div class="class= container-fluid bg-success pt-4 pb-4">
 
-            <footer class="text-white text-center p-10" id="Footer">
-                <button type="button" class="btn  btn-outline-light" onclick="">
-                    <i class="bi bi-instagram"></i>
-                </button>
-                <button type="button" class="btn  btn-outline-light" onclick="">
-                    <i class="bi bi-facebook"></i>
-                </button>
-                <button type="button" class="btn  btn-outline-light" onclick="">
-                    <i class="bi bi-tiktok"></i>
-                </button>
+        <footer class="text-white text-center p-10" id="Footer">
+            <button type="button" class="btn  btn-outline-light" onclick="">
+                <i class="bi bi-instagram"></i>
+            </button>
+            <button type="button" class="btn  btn-outline-light" onclick="">
+                <i class="bi bi-facebook"></i>
+            </button>
+            <button type="button" class="btn  btn-outline-light" onclick="">
+                <i class="bi bi-tiktok"></i>
+            </button>
 
-                <br>
-                <h5 class="pt-3">Alamat</h5>
-                <p id="Alamat">
-                    Dusun I, Karangcegak, Kec. Sumbang, Kabupaten Banyumas, Jawa Tengah 53183
-                </p>
-                <hr>
-                <p class="text-center mx-0 my-0" id="Copyright">
-                    Copyright © Smp Muhammadiyah Sumbang
-                </p>
-            </footer>
+            <br>
+            <h5 class="pt-3">Alamat</h5>
+            <p id="Alamat">
+                Dusun I, Karangcegak, Kec. Sumbang, Kabupaten Banyumas, Jawa Tengah 53183
+            </p>
+            <hr>
+            <p class="text-center mx-0 my-0" id="Copyright">
+                Copyright © Smp Muhammadiyah Sumbang
+            </p>
+        </footer>
 
     </div>
     <!-- Akhir Footer -->

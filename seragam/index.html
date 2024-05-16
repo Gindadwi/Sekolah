@@ -167,7 +167,7 @@
             </div>
 
             <div class="row mx-auto justify-content-center">
-                <div v-for="seragam in filteredSeragam" :key="seragam.id" class="card col-5 m-2">
+                <div v-for="seragam in filteredSeragam" :key="seragam.id" class="card col-5 m-2" data-aos="fade-right" data-aos-delay="70" data-aos-duration="1400">
                     <img :src="seragam.image" :alt="seragam.name" class="border shadow">
                     <h5>{{ seragam.name }}</h5>
                     <p class="text-danger">Rp.{{ seragam.harga }}</p>
@@ -211,7 +211,7 @@
                     return {
                         searchQuery: '',
                         seragamList: [
-                            { id: 1, name: 'Seragam Osis', image: 'src/osis.jpg', harga: 200000, pesanan: 1 },
+                            { id: 1, name: 'Seragam Osis', image: 'src/osis.jpg', harga: 200000, pesanan: 1, },
                             { id: 3, name: 'Seragam Batik', image: 'src/batik.jpg', harga: 100000, pesanan: 1 },
 
                             { id: 2, name: 'Seragam Pramuka', image: 'src/pramuka.jpg', harga: 200000, pesanan: 1 },
@@ -241,7 +241,7 @@
                     },
                     totalHarga(seragam) {
                         return seragam.harga * seragam.pesanan;
-                    }
+                    },                    
 
 
                 }
