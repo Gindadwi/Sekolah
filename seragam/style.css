@@ -108,7 +108,7 @@
 .card h5 {
   font-family: "Baloo 2";
   font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
   padding-top: 10px;
 }
 .card button {
@@ -120,4 +120,7 @@
 .card button .btn :hover {
   background: blue;
   color: white;
+}
+.card seragam.harga {
+  color: orangered;
 }/*# sourceMappingURL=style.css.map */

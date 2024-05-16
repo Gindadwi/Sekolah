@@ -170,6 +170,7 @@
                 <div v-for="seragam in filteredSeragam" :key="seragam.id" class="card col-5 m-2">
                     <img :src="seragam.image" :alt="seragam.name" class="border shadow">
                     <h5>{{ seragam.name }}</h5>
+                    <p class="text-danger">Rp.{{ seragam.harga }}</p>
                     <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
                         :data-bs-target="'#modal' + seragam.id">
                         Klik Beli
@@ -189,10 +190,11 @@
                             <img :src="seragam.image" alt="" width="120px" class="border">
                             <br>
                             <div class="d-inline-flex gap-2 pt-3">
-                                <button class="btn mt-1 border shadow" @click="Pesanan++">+</button>
-                                <button class="btn mt-1 border shadow" @click="Pesanan--">-</button>
+                                <button class="btn mt-1 border shadow" @click="incrementPesanan(seragam)">+</button>
+                                <button class="btn mt-1 border shadow" @click="decrementPesanan(seragam)">-</button>
                             </div>
-                            <p class="pt-3">Masukan Jumlah Pesan: {{Pesanan}}</p>
+                            <p class="pt-3">Masukan Jumlah Pesan: {{ seragam.pesanan }}</p>
+                            <p class="">Total Harga: Rp {{ totalHarga(seragam) }}</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -201,35 +203,49 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
         <script>
             const app = Vue.createApp({
                 data() {
                     return {
-                        Pesanan: 0,
                         searchQuery: '',
                         seragamList: [
-                            { id: 1, name: 'Seragam Osis Smp', image: 'src/osis.jpg' },
-                            { id: 2, name: 'Seragam Pramuka', image: 'src/pramuka.jpg' },
-                            { id: 3, name: 'Seragam Batik', image: 'src/batik.jpg' },
-                            { id: 4, name: 'Seragam Olahraga', image: 'src/olahraga.png' },
-                            { id: 5, name: 'Paket Alat Tulis', image: 'src/alatTulis.png' },
-                            { id: 6, name: 'Kaos Kaki Pramuka', image: 'src/kaoskaki1.jpeg' },
-                            { id: 7, name: 'Kaos Kaki Osis', image: 'src/kaoskaki2.jpeg' },
-                            { id: 8, name: 'Sabuk Sekolah', image: 'src/Sabuk.jpg' },
-                            { id: 9, name: 'Sepatu Laki-Laki', image: 'src/sepatu1.jpeg' },
-                            { id: 10, name: 'Sepatu Perempuan', image: 'src/sepatu2.jpeg' }
+                            { id: 1, name: 'Seragam Osis', image: 'src/osis.jpg', harga: 200000, pesanan: 1 },
+                            { id: 3, name: 'Seragam Batik', image: 'src/batik.jpg', harga: 100000, pesanan: 1 },
+
+                            { id: 2, name: 'Seragam Pramuka', image: 'src/pramuka.jpg', harga: 200000, pesanan: 1 },
+                            { id: 4, name: 'Seragam Olahraga', image: 'src/olahraga.png', harga: 100000, pesanan: 1 },
+                            { id: 5, name: 'Paket Alat Tulis', image: 'src/alatTulis.png', harga: 50000, pesanan: 1 },
+                            { id: 6, name: 'Kaos Kaki Pramuka', image: 'src/kaoskaki1.jpeg', harga: 20000, pesanan: 1 },
+                            { id: 7, name: 'Kaos Kaki Osis', image: 'src/kaoskaki2.jpeg', harga: 20000, pesanan: 1 },
+                            { id: 8, name: 'Sabuk Sekolah', image: 'src/Sabuk.jpg', harga: 15000, pesanan: 1 },
+                            { id: 9, name: 'Sepatu Laki-Laki', image: 'src/sepatu1.jpeg', harga: 150000, pesanan: 1 },
+                            { id: 10, name: 'Sepatu Perempuan', image: 'src/sepatu2.jpeg', harga: 150000, pesanan: 1 }
                         ]
-                    }
+                    };
                 },
                 computed: {
                     filteredSeragam() {
                         return this.seragamList.filter(seragam => seragam.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
                     }
+                },
+                methods: {
+                    incrementPesanan(seragam) {
+                        seragam.pesanan++;
+                    },
+                    decrementPesanan(seragam) {
+                        if (seragam.pesanan > 1) {
+                            seragam.pesanan--;
+                        }
+                    },
+                    totalHarga(seragam) {
+                        return seragam.harga * seragam.pesanan;
+                    }
+
+
                 }
-            }).mount('#app')
+            }).mount('#app');
         </script>
 
     </section>
