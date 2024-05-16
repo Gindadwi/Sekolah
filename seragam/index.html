@@ -16,9 +16,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+        <!-- Aos Animation -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
+
+        <!-- CDN AOS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
 
     <!-- kode CDN Vue js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -167,7 +176,7 @@
             </div>
 
             <div class="row mx-auto justify-content-center">
-                <div v-for="seragam in filteredSeragam" :key="seragam.id" class="card col-5 m-2" data-aos="fade-right" data-aos-delay="70" data-aos-duration="1400">
+                <div v-for="seragam in filteredSeragam" :key="seragam.id" class="card col-5 m-2" data-aos="flip-right" data-aos-delay="70" data-aos-duration="1400">
                     <img :src="seragam.image" :alt="seragam.name" class="border shadow">
                     <h5>{{ seragam.name }}</h5>
                     <p class="text-danger">Rp.{{ seragam.harga }}</p>
