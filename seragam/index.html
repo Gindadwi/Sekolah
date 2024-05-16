@@ -161,7 +161,8 @@
             <!-- Input Pencarian -->
             <div class="row mb-4">
                 <div class="col-12">
-                    <input type="text" class="form-control border border-success" v-model="searchQuery" placeholder="Cari seragam...">
+                    <input type="text" class="form-control border border-success" v-model="searchQuery"
+                        placeholder="Cari seragam...">
                 </div>
             </div>
 
@@ -169,14 +170,16 @@
                 <div v-for="seragam in filteredSeragam" :key="seragam.id" class="card col-5 m-2">
                     <img :src="seragam.image" :alt="seragam.name" class="border shadow">
                     <h5>{{ seragam.name }}</h5>
-                    <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" :data-bs-target="'#modal' + seragam.id">
+                    <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
+                        :data-bs-target="'#modal' + seragam.id">
                         Klik Beli
                     </button>
                 </div>
             </div>
 
             <!-- Modal templates for each seragam -->
-            <div v-for="seragam in filteredSeragam" :key="seragam.id" class="modal fade" :id="'modal' + seragam.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div v-for="seragam in filteredSeragam" :key="seragam.id" class="modal fade" :id="'modal' + seragam.id"
+                tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -208,10 +211,16 @@
                         Pesanan: 0,
                         searchQuery: '',
                         seragamList: [
-                            { id: 1, name: 'Seragam Osis', image: 'src/osis.jpg' },
+                            { id: 1, name: 'Seragam Osis Smp', image: 'src/osis.jpg' },
                             { id: 2, name: 'Seragam Pramuka', image: 'src/pramuka.jpg' },
                             { id: 3, name: 'Seragam Batik', image: 'src/batik.jpg' },
-                            { id: 4, name: 'Seragam Olahraga', image: 'src/olahraga.png' }
+                            { id: 4, name: 'Seragam Olahraga', image: 'src/olahraga.png' },
+                            { id: 5, name: 'Paket Alat Tulis', image: 'src/alatTulis.png' },
+                            { id: 6, name: 'Kaos Kaki Pramuka', image: 'src/kaoskaki1.jpeg' },
+                            { id: 7, name: 'Kaos Kaki Osis', image: 'src/kaoskaki2.jpeg' },
+                            { id: 8, name: 'Sabuk Sekolah', image: 'src/Sabuk.jpg' },
+                            { id: 9, name: 'Sepatu Laki-Laki', image: 'src/sepatu1.jpeg' },
+                            { id: 10, name: 'Sepatu Perempuan', image: 'src/sepatu2.jpeg' }
                         ]
                     }
                 },
@@ -226,128 +235,33 @@
     </section>
     <!-- Akhir Menu Jual Baju Sekolah -->
 
-    <!-- Footer -->
-    <footer class="bg-success text-center text-lg-start text-white">
-        <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block">
-                <span>Get connected with us on social networks:</span>
-            </div>
-            <!-- Left -->
+    <!-- Ngoding Footer -->
+    <div class="class= container-fluid bg-success pt-4 pb-4">
 
-            <!-- Right -->
-            <div>
-                <a href="" class="me-4 link-light">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="" class="me-4 link-light">
-                    <i class="bi bi-twitter"></i>
-                </a>
-                <a href="" class="me-4 link-light">
-                    <i class="bi bi-google"></i>
-                </a>
-                <a href="" class="me-4 link-light">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="" class="me-4 link-light">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="" class="me-4 link-light">
-                    <i class="bi bi-github"></i>
-                </a>
-            </div>
-            <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
+        <footer class="text-white text-center p-10" id="Footer">
+            <button type="button" class="btn  btn-outline-light" onclick="">
+                <i class="bi bi-instagram"></i>
+            </button>
+            <button type="button" class="btn  btn-outline-light" onclick="">
+                <i class="bi bi-facebook"></i>
+            </button>
+            <button type="button" class="btn  btn-outline-light" onclick="">
+                <i class="bi bi-tiktok"></i>
+            </button>
 
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="bi bi-gem me-3"></i>Company name
-                        </h6>
-                        <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
-                            amet, consectetur
-                            adipisicing elit.
-                        </p>
-                    </div>
-                    <!-- Grid column -->
+            <br>
+            <h5 class="pt-3">Alamat</h5>
+            <p id="Alamat">
+                Dusun I, Karangcegak, Kec. Sumbang, Kabupaten Banyumas, Jawa Tengah 53183
+            </p>
+            <hr>
+            <p class="text-center mx-0 my-0" id="Copyright">
+                Copyright © Smp Muhammadiyah Sumbang
+            </p>
+        </footer>
 
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Products
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-white">Angular</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">React</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Vue</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Laravel</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
+    </div>
 
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-white">Pricing</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Settings</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Orders</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-white">Help</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p><i class="bi bi-house-door me-3"></i> New York, NY 10012, US</p>
-                        <p>
-                            <i class="bi bi-envelope me-3"></i>
-                            info@example.com
-                        </p>
-                        <p><i class="bi bi-telephone me-3"></i> + 01 234 567 88</p>
-                        <p><i class="bi bi-telephone me-3"></i> + 01 234 567 89</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div class="text-center p-4 bg-success" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2021 Copyright:
-            <a class="text-white fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
     <!-- Akhir Footer -->
 
     <!-- CDN Bootstrap -->
