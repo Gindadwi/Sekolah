@@ -1,0 +1,229 @@
+// Ngoding NavBar
+.navbar {
+
+
+
+
+    #Logo {
+        margin-left: 15px;
+        font-size: 25px;
+        font-family: 'Baloo 2', sans-serif;
+        font-weight: bold;
+    }
+
+
+    .navbar-nav {
+        font-size: 18px;
+        font-family: 'Poppins';
+
+        .nav-item {
+            color: white;
+        }
+
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 1.25rem;
+        color: green;
+    }
+
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 27px;
+
+    }
+
+    .navbar-toggler:focus,
+    .btnclose:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .nav-link {
+        color: #ffffff;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+    }
+
+    .nav-item {
+        color: #ffffff;
+    }
+
+    .Button1 {
+        color: green;
+        font-size: 15px;
+        font-family: 'Poppins';
+    }
+
+    .Button2 {
+        font-size: 15px;
+        font-family: 'Poppins';
+    }
+
+    .ButtonDekstop {
+        color: green;
+        font-size: 15px;
+        font-family: 'Poppins';
+    }
+
+
+    #ButtonModal {
+        margin: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        width: 100px;
+    }
+
+    /* Mengatur lebar sidebar saat di mobile */
+    .offcanvas {
+        max-width: 80%;
+    }
+
+    /* responsife di mobile */
+    @media (max-width: 768px) {
+        .offcanvas {
+            max-width: 60%;
+        }
+
+        .navbar-nav {
+            font-size: 15px;
+        }
+
+        #btnLogin {
+
+            display: none;
+        }
+
+        .navbar .navbar-brand,
+        .navbar .navbar-nav .nav-link {
+            color: black;
+        }
+    }
+
+
+    // responsife Dekstop
+    @media (min-width: 768px) {
+        #btnLogin1 {
+            display: none;
+        }
+
+        .navbar .navbar-brand,
+        .navbar .navbar-nav .nav-link {
+            color: white;
+        }
+
+    }
+}
+
+#ForgotPassword {
+    margin-top: 10px;
+    color: blue;
+    font-family: 'Poppins';
+    font-size: 12px;
+}
+
+
+
+// Foto Prestasi
+#FotoPrestasi {
+    text-align: center;
+
+    h1 {
+        font-family: 'Baloo 2';
+        font-weight: 600;
+    }
+
+    p {
+        font-family: 'Poppins';
+    }
+
+    .card {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        font-family: 'Poppins';
+        margin: 5px;
+        position: relative;
+
+        img {
+            width: 130%;
+            height: auto;
+            padding-right: 30px;
+            padding-top: 10px;
+        }
+
+        h5 {
+            padding-top: 10px;
+        }
+    }
+
+
+    .box {
+        max-width: 350px;
+        margin: 5px;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border: 1px solid #fff;
+        border-radius: 5px;
+
+        img {
+            width: 100%;
+            margin: auto;
+            padding-top: 10px;
+        }
+    }
+
+}
+
+
+// Footer
+#Footer {
+    h5 {
+        font-family: 'Baloo 2';
+        font-size: 28px;
+    }
+
+    #Alamat {
+        padding-top: -20px;
+        margin-top: -10px;
+        font-family: 'Poppins';
+        font-size: 13px;
+    }
+
+    #Copyright {
+        font-family: 'Poppins';
+        font-size: 13px;
+    }
+}
+
+@media (min-width:768px) {
+    #MobileFoto {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    #DesktopFoto {
+        display: none;
+    }
+}
