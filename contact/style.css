@@ -1,0 +1,22 @@
+h1 {
+  font-family: "Baloo 2";
+}
+
+p {
+  font-family: "Poppins";
+}
+
+label {
+  font-family: "Poppins";
+}
+
+#KirimPesanan {
+  font-family: "Poppins";
+}
+
+#Logo {
+  margin-left: 15px;
+  font-size: 25px;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
