@@ -68,6 +68,13 @@
   font-size: 15px;
   font-family: "Poppins";
 }
+.navbar #ButtonModal {
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  width: 100px;
+}
 .navbar .offcanvas {
   max-width: 80%;
 }
@@ -94,6 +101,13 @@
   .navbar .navbar .navbar-nav .nav-link {
     color: white;
   }
+}
+
+#ForgotPassword {
+  margin-top: 10px;
+  color: blue;
+  font-family: "Poppins";
+  font-size: 12px;
 }
 
 .HeroMenu {

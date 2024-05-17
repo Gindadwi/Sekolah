@@ -109,9 +109,8 @@
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-header text-center">
+                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Login To Website</h1>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -125,7 +124,15 @@
                             <input type="password" class="form-control border border-success" id="password"
                                 placeholder="Enter password">
                         </div>
-                        <button type="submit" class="btn btn-success">Login</button>
+                        
+
+                        <div class="">
+                            <button id="ButtonModal" type="submit" class="btn btn-success w-100">Login</button>
+                            <button id="ButtonModal" type="submit" class="btn btn-outline-success w-100 mt-2"> <i><img src="./src/google.png" alt="" width="20px"></i> Login With Google</button>
+                        </div>
+                        <div>
+                            <p href="#" class="text-center text-Primary" id="ForgotPassword">Forgot Password</p>
+                        </div>
                     </form>
 
                 </div>
@@ -141,7 +148,6 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form id="registerForm">
@@ -166,7 +172,7 @@
                             <input type="password" class="form-control border border-success" id="confirm_password"
                                 name="confirm_password" placeholder="Confirm password">
                         </div>
-                        <button type="submit" class="btn btn-success">Register</button>
+                        <button type="submit" class="btn btn-success w-100">Register</button>
                     </form>
                 </div>
 
@@ -186,19 +192,22 @@
 
             <!-- Image Muncul di Mobile -->
             <div class="ImageHero mb-4 text-center">
-                <img class="ImagesHero" src="src/school-boy-holding-copy-space-notebook.jpg" alt="" 
-                width="200" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
+                <img class="ImagesHero" src="src/school-boy-holding-copy-space-notebook.jpg" alt="" width="200"
+                    data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
             </div>
 
             <div class="row fs-5 justify-content-center align-items-center">
                 <div class="col-md-6 justify-content-center" id="HeroString">
-                    <h3 data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000" >Welcome To School</h3>
+                    <h3 data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">Welcome To School</h3>
                     <h1 data-aos="fade-right" data-aos-delay="70" data-aos-duration="1200">Smp Muhammadiyah sumbang</h1>
-                    <p data-aos="fade-right" data-aos-delay="90" data-aos-duration="1400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores sit quibusdam
+                    <p data-aos="fade-right" data-aos-delay="90" data-aos-duration="1400">Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit. Nulla maiores sit quibusdam
                         impedit! Distinctio ut quae commodi repellat exercitationem cumque ab voluptas vel inventore
                         beatae.</p>
-                    <button @click="openModal" class="btn btn-success" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1600">Pendaftaran Siswa</button>
-                    <button class="btn btn-outline-success" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1000">About</button>
+                    <button @click="openModal" class="btn btn-success" data-aos="fade-right" data-aos-delay="110"
+                        data-aos-duration="1600">Pendaftaran Siswa</button>
+                    <button class="btn btn-outline-success" data-aos="fade-right" data-aos-delay="110"
+                        data-aos-duration="1000">About</button>
                 </div>
 
 
@@ -213,7 +222,7 @@
     <!-- Akhir Menu Hero -->
 
     <!-- Koding di bawah Hero menu -->
-    
+
     <section class="bg-success ">
         <div class="container ">
             <!-- Muncul di Dekstop -->
@@ -233,7 +242,7 @@
                     <h6 class="text-center">Siswa lulusan terbaik</h6>
                 </div>
             </div>
-    
+
             <!-- Muncul di Mobile -->
             <div class="row align-items-left pt-2   text-center" id="PrestasiMobile">
                 <div class="col text-white  border-end-custom border-white" data-aos="fade-down" data-aos-delay="50"
@@ -254,9 +263,9 @@
                 </div>
             </div>
         </div>
-    
+
     </section>
-    
+
     <!-- akhir kode di bawah hero menu -->
 
     <!-- Ngoding About -->
@@ -264,7 +273,8 @@
         <div class="container pb-4">
             <!-- Dekstop -->
             <div class="AboutHome text-center">
-                <h5 class=" text-primary-emphasis pt-5" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1500">
+                <h5 class=" text-primary-emphasis pt-5" data-aos="fade-down" data-aos-delay="50"
+                    data-aos-duration="1500">
                     why should we?</h5>
                 <h3 class="text-center" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1600">Benefits of
                     joining our school</h3>
@@ -324,15 +334,16 @@
                 </div>
             </div>
     </section>
-    
-    
+
+
     <!-- Akhir ngoding about -->
 
     <!-- Ngoding Kenapa Harus Kami -->
     <section>
         <div class="container" id="KenapaKAmi">
             <div class=" text-center">
-                <h1 class="pt-2" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">Kenapa Harus Kami</h1>
+                <h1 class="pt-2" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">Kenapa Harus Kami
+                </h1>
                 <hr class="garis">
             </div>
             <div class="row align-items-center" id="AboutFoto">
@@ -350,39 +361,42 @@
                         debitis libero odio aspernatur.</p>
                 </div>
             </div>
-    
-    
+
+
             <div class="row align-items-center pt-5" id="AboutFoto">
-    
+
                 <div class="text-center">
-                    <img src="src/lab sekolah.jpg" alt="" width="325" id="MobileImage" class="shadow" data-aos="flip-left"
-                        data-aos-delay="60" data-aos-duration="1200">
+                    <img src="src/lab sekolah.jpg" alt="" width="325" id="MobileImage" class="shadow"
+                        data-aos="flip-left" data-aos-delay="60" data-aos-duration="1200">
                 </div>
-    
-                <div class="col-lg-5 text-end" id="text1" data-aos="fade-right" data-aos-delay="60" data-aos-duration="1200">
+
+                <div class="col-lg-5 text-end" id="text1" data-aos="fade-right" data-aos-delay="60"
+                    data-aos-duration="1200">
                     <h2 class="pt-3">Memiliki Program-Program untuk Meningkatkan skill</h2>
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facilis
                         laudantium recusandae
                         debitis. Veritatis, amet. Fugiat quia dolorem consequatur maxime commodi, debitis libero odio
                         aspernatur.</p>
                 </div>
-    
+
                 <div class="col-lg-5 text-start">
                     <img src="src/lab sekolah.jpg" alt="" width="500" id="DekstopImage">
                 </div>
-    
+
             </div>
         </div>
     </section>
-    
+
     <!--Akhir Ngoding Kenapa Harus Kami -->
 
     <!-- Ngodin foto foto prestasi-->
     <section class="bg-success-subtle mt-5 mb-7" id="FotoPrestasi">
         <div class="container">
 
-            <h1 class="text-center pt-4" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">Prestasi Kami</h1>
-            <p data-aos="fade-down" data-aos-delay="60" data-aos-duration="1200">Di bawah ini Beberapa contoh prestasi yang sudah kami peroleh baik tingkat kabupaten maupun nasional</p>
+            <h1 class="text-center pt-4" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">Prestasi Kami
+            </h1>
+            <p data-aos="fade-down" data-aos-delay="60" data-aos-duration="1200">Di bawah ini Beberapa contoh prestasi
+                yang sudah kami peroleh baik tingkat kabupaten maupun nasional</p>
 
             <!-- Muncul Di Mobile -->
             <div class="row mx-auto justify-content-center pb-5 " id="MobileFoto">

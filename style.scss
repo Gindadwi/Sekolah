@@ -87,6 +87,15 @@
         font-family: 'Poppins';
     }
 
+
+    #ButtonModal{
+        margin: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        width: 100px;
+    }
+
     /* Mengatur lebar sidebar saat di mobile */
     .offcanvas {
         max-width: 80%;
@@ -126,6 +135,13 @@
         }
 
     }
+}
+
+#ForgotPassword{
+    margin-top: 10px;
+    color: blue;
+    font-family: 'Poppins';
+    font-size: 12px;
 }
 
 
