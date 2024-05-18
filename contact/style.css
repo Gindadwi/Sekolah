@@ -19,4 +19,116 @@ label {
   font-size: 25px;
   font-family: "Baloo 2", sans-serif;
   font-weight: bold;
+}
+
+.navbar {
+  /* Mengatur lebar sidebar saat di mobile */
+  /* responsife di mobile */
+}
+.navbar #Logo {
+  margin-left: 15px;
+  font-size: 25px;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: bold;
+}
+.navbar .navbar-nav {
+  font-size: 18px;
+  font-family: "Poppins";
+}
+.navbar .navbar-nav .nav-item {
+  color: white;
+}
+.navbar .navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+  color: green;
+}
+.navbar .navbar-toggler-icon {
+  width: 20px;
+  height: 27px;
+}
+.navbar .navbar-toggler:focus,
+.navbar .btnclose:focus {
+  box-shadow: none;
+  outline: none;
+}
+.navbar .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+}
+.navbar .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+.navbar .nav-link:hover::before,
+.navbar .nav-link:hover::before {
+  width: 100%;
+  visibility: visible;
+}
+.navbar .nav-item {
+  color: #ffffff;
+}
+.navbar .Button1 {
+  color: green;
+  font-size: 15px;
+  font-family: "Poppins";
+}
+.navbar .Button2 {
+  font-size: 15px;
+  font-family: "Poppins";
+}
+.navbar .ButtonDekstop {
+  color: green;
+  font-size: 15px;
+  font-family: "Poppins";
+}
+.navbar #ButtonModal {
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  width: 100px;
+}
+.navbar .offcanvas {
+  max-width: 80%;
+}
+@media (max-width: 768px) {
+  .navbar .offcanvas {
+    max-width: 60%;
+  }
+  .navbar .navbar-nav {
+    font-size: 15px;
+  }
+  .navbar #btnLogin {
+    display: none;
+  }
+  .navbar .navbar .navbar-brand,
+  .navbar .navbar .navbar-nav .nav-link {
+    color: black;
+  }
+}
+@media (min-width: 768px) {
+  .navbar #btnLogin1 {
+    display: none;
+  }
+  .navbar .navbar .navbar-brand,
+  .navbar .navbar .navbar-nav .nav-link {
+    color: white;
+  }
+}
+
+#ForgotPassword {
+  margin-top: 10px;
+  color: blue;
+  font-family: "Poppins";
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */
